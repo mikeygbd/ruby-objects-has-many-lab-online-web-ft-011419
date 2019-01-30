@@ -4,7 +4,10 @@ class Artist
   def initialize(name)
     @name = name
     @songs =[]
+<<<<<<< HEAD
 
+=======
+>>>>>>> dfe7d1fcb94c645ec58db72c8dd23544ee2a90d8
   end
 
   def songs
@@ -12,6 +15,7 @@ class Artist
   end
 
   def add_song(song)
+<<<<<<< HEAD
     @songs << song
   song.artist = self
 
@@ -26,6 +30,21 @@ class Artist
 
   def self.song_count
     Song.all.length
+=======
+  song.artist = self
+  @songs << song
+  end
+
+  def add_song_by_name(song)
+    song = Song.new(name)
+    @songs << song
+    song.artist = self
+  end
+
+  def self.song_count
+  count =  @songs.length
+  count
+>>>>>>> dfe7d1fcb94c645ec58db72c8dd23544ee2a90d8
   end
 
 end
